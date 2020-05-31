@@ -1,0 +1,82 @@
+<html>
+<title>ludo</title>
+<style>
+*{
+margin:0;
+padding:0;
+}
+body{
+}
+h1{
+text-shadow:5px 0 red;
+font-size:55px;
+font-weight:bold;
+text-align:center;
+}
+img{
+width:400px;
+height:400px;
+margin:auto;
+}
+.container{
+width:70%;
+margin:auto;
+text-align:center;
+}
+.dice{
+display:inline-block;
+text-align:center;
+}
+p{
+font-weight:bold;
+text-align:center;
+font-size:30px;
+color:green;
+}
+button{
+text-align:center;
+padding:10px;
+border:none;
+background-color:green;
+margin-left:60px;
+}
+</style>
+<body>
+<div class="container">
+<h1 id="winner">Ludo King</h1>
+<div class="dice">
+<p>player1</p>
+<img src="images/1.png"id="d1">
+</div>
+<div class="dice">
+<p>player2</p>
+<img src="images/2.png"id="d2">
+</div>
+<button onclick="myludo()">click</button>
+</div>
+<script>
+function myludo(){
+var dice1=Math.random()*6 +1;
+dice1=Math.floor(dice1);
+var  dice11="images/"+dice1+".png";
+document.getElementById("d1").setAttribute('src',dice11);
+var dice2=Math.random()*6 +1;
+dice2=Math.floor(dice2);
+var  dice12="images/"+dice2+".png";
+document.getElementById("d2").setAttribute('src',dice12);
+if(dice1>dice2)
+{
+document.getElementById('winner').innerHTML="Player 1 won :)";
+}
+else if(dice1<dice2)
+{
+document.getElementById('winner').innerHTML="Player 2 won :)";
+}
+else{
+document.getElementById('winner').innerHTML="Draw";
+}
+}
+
+</script>
+</body>
+</html>

@@ -58,11 +58,11 @@ margin-left:60px;
 function myludo(){
 var dice1=Math.random()*6 +1;
 dice1=Math.floor(dice1);
-var  dice11="images/"+dice1+".png";
+var  dice11=+dice1+".png";
 document.getElementById("d1").setAttribute('src',dice11);
 var dice2=Math.random()*6 +1;
 dice2=Math.floor(dice2);
-var  dice12="images/"+dice2+".png";
+var  dice12=+dice2+".png";
 document.getElementById("d2").setAttribute('src',dice12);
 if(dice1>dice2)
 {
